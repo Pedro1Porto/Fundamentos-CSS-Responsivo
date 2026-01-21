@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto; /*organiza na horizontal, 0 na X e automatiza na Y*/
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.submenu{
+    display: none;
+    border: 1px solid red;
+    position: absolute; /*fixa o elemento na posiçao definida dele, sem atrapalhar o amigo do lado*/
+    left: 0%;
+    width: 150px;
+    top: 100%;
+}
+
+.menu > li{
+    display: none;
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.clear{
+    clear: both;
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+.menu li:hover{
+    border-top: 4px solid red;
+}
+
+.submenu li{
+    padding: 8px;
+}
